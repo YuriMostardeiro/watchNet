@@ -1,0 +1,11 @@
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\bin\Debug\netcoreapp2.1\Watch.deps.json
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\bin\Debug\netcoreapp2.1\Watch.runtimeconfig.json
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\bin\Debug\netcoreapp2.1\Watch.runtimeconfig.dev.json
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\bin\Debug\netcoreapp2.1\Watch.dll
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\bin\Debug\netcoreapp2.1\Watch.pdb
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.csprojAssemblyReference.cache
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.csproj.CoreCompileInputs.cache
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.AssemblyInfoInputs.cache
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.AssemblyInfo.cs
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.dll
+C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.pdb
