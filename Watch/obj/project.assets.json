@@ -193,6 +193,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "morelinq/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -634,6 +643,27 @@
         "version.txt"
       ]
     },
+    "morelinq/3.2.0": {
+      "sha512": "Anb2PApG8NYVXR2tG3kYje9E3pNFkyjeTtvhTzaLtCIBs2v1KB3nGuwmsh/froF4TPwqj1Uy9pNadreairnpZQ==",
+      "type": "package",
+      "path": "morelinq/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "lib/net451/MoreLinq.dll",
+        "lib/net451/MoreLinq.pdb",
+        "lib/net451/MoreLinq.xml",
+        "lib/netstandard1.0/MoreLinq.dll",
+        "lib/netstandard1.0/MoreLinq.pdb",
+        "lib/netstandard1.0/MoreLinq.xml",
+        "lib/netstandard2.0/MoreLinq.dll",
+        "lib/netstandard2.0/MoreLinq.pdb",
+        "lib/netstandard2.0/MoreLinq.xml",
+        "morelinq.3.2.0.nupkg.sha512",
+        "morelinq.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.3": {
       "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
@@ -934,27 +964,28 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NETCore.App >= 2.1.0",
-      "System.Configuration.ConfigurationManager >= 4.5.0"
+      "System.Configuration.ConfigurationManager >= 4.5.0",
+      "morelinq >= 3.2.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\YVMostardeiro\\.nuget\\packages\\": {},
+    "C:\\Users\\Yuri\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\YVMostardeiro\\Desktop\\test-test\\watchNet\\Watch\\Watch\\Watch.csproj",
+      "projectUniqueName": "C:\\Users\\Yuri\\Desktop\\Nova pasta\\watchNet\\Watch\\Watch.csproj",
       "projectName": "Watch",
-      "projectPath": "C:\\Users\\YVMostardeiro\\Desktop\\test-test\\watchNet\\Watch\\Watch\\Watch.csproj",
-      "packagesPath": "C:\\Users\\YVMostardeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\YVMostardeiro\\Desktop\\test-test\\watchNet\\Watch\\Watch\\obj\\",
+      "projectPath": "C:\\Users\\Yuri\\Desktop\\Nova pasta\\watchNet\\Watch\\Watch.csproj",
+      "packagesPath": "C:\\Users\\Yuri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yuri\\Desktop\\Nova pasta\\watchNet\\Watch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\YVMostardeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Yuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -986,6 +1017,10 @@
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "morelinq": {
+            "target": "Package",
+            "version": "[3.2.0, )"
           }
         },
         "imports": [

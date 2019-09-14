@@ -7,7 +7,6 @@ namespace Watch
     {
         static void Main(string[] args)
         {
-            //FileService fileService = new FileService();
             FileService.WatchFile();
         }
     }

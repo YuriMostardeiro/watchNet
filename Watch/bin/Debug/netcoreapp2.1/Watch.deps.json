@@ -1,17 +1,26 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "a764749050f69525e9893471b050e4bf3e58d336"
+    "signature": "8c7271e9c3f958bf69ad57c9154b56ce557fa54e"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Watch/1.0.0": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "4.5.0"
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "morelinq": "3.2.0"
         },
         "runtime": {
           "Watch.dll": {}
+        }
+      },
+      "morelinq/3.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
         }
       },
       "System.Configuration.ConfigurationManager/4.5.0": {
@@ -83,6 +92,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "morelinq/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Anb2PApG8NYVXR2tG3kYje9E3pNFkyjeTtvhTzaLtCIBs2v1KB3nGuwmsh/froF4TPwqj1Uy9pNadreairnpZQ==",
+      "path": "morelinq/3.2.0",
+      "hashPath": "morelinq.3.2.0.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/4.5.0": {
       "type": "package",

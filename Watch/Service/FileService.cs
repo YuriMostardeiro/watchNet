@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoreLinq;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -13,6 +14,7 @@ namespace Watch.Service
     public class FileService
     {
         private static readonly string folderIn = Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%") + "\\data\\in";
+        private static readonly string folderOut = Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%") + "\\data\\out";
         public void WatchFiles()
         {
             try
@@ -130,14 +132,17 @@ namespace Watch.Service
         private static void LoadData(string filePath)
         {
             string file = File.ReadAllText(filePath, Encoding.UTF7);
-            var fileRow = file.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+            var fileRow = file.Split(new string[] { "\n" }, StringSplitOptions.None);
             
             Salesman salesman = new Salesman();
             Sale sale = new Sale();
             Customer customer = new Customer();
             var lstSalesman = salesman.LoadSalesman(fileRow.Where(t => t.Contains("001")));
-            var lstSale = sale.LoadSale(fileRow.Where(t => t.Contains("002")));
-            var lstCustomer = customer.LoadCustomer(fileRow.Where(t => t.Contains("003")));
+            var lstCustomer = customer.LoadCustomer(fileRow.Where(t => t.Contains("002")));
+            var lstSale = sale.LoadSale(fileRow.Where(t => t.Contains("003")));
+
+            GeraArquivo(lstSalesman, lstCustomer, lstSale);
+            
         }
         private static void OnRenamed(object source, RenamedEventArgs e) =>
             // Specify what is done when a file is renamed.
@@ -149,32 +154,26 @@ namespace Watch.Service
         /// <param name="vendedores"></param>
         /// <param name="clientes"></param>
         /// <param name="vendas"></param>
-        private void GeraArquivo(List<Salesman> salesman, List<Customer> customer, List<Sale> sale)
+        private static void GeraArquivo(List<Salesman> salesman, List<Customer> customer, List<Sale> sale)
         {
             StreamWriter file;
-            /*List<MaiorValor> maiorValor = new List<MaiorValor>();
+            List<SaleItem> maiorValor = new List<SaleItem>();
 
-            string arquivo = ConfigurationManager.AppSettings["WritePath"] + "Venda.txt";
+            string arquivo = folderOut + "\\OutputFile.txt";
 
             file = File.CreateText(arquivo);
 
-            //Quantidade de Clientes
-            file.WriteLine("Quantidade de Clientes: " + customer.Count());
+            file.WriteLine("Amount of salesman in the input file: " + customer.Count());
 
-            //Quantidade de Vendedores
-            file.WriteLine("Quantidade de Vendedores: " + salesman.Count());
+            file.WriteLine("Amount of costumers in the input file: " + salesman.Count());
+            
+            Sale maxSalePrice = sale.MaxBy(x=> x.SalePrice).SingleOrDefault();
 
-            // ID da venda mais cara
-            sale.ForEach(venda =>
-                venda.Itens.ForEach(item =>
-                    maiorValor.Add(new MaiorValor { Id = item.ItemId, Valor = item.Quantidade * item.Preco })));
+            file.WriteLine("Id of the most expensive sale: " + maxSalePrice.SaleId);
 
-            file.WriteLine("Id da maior venda: " + maiorValor.OrderByDescending(x => x.Valor).First().Id);
+            file.WriteLine("Worst salesman: " + sale.OrderBy(x => x.SalePrice).FirstOrDefault().Salesman);
 
-            // Pior Vendedor
-            file.WriteLine("Pior vendedor: " + sale.OrderBy(x => x.TotalVenda).First().NomeVendedor);
-
-            file.Close();*/
+            file.Close();
         }
     }
 }

@@ -9,3 +9,13 @@ C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcorea
 C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.AssemblyInfo.cs
 C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.dll
 C:\Users\YVMostardeiro\Desktop\test-test\watchNet\Watch\Watch\obj\Debug\netcoreapp2.1\Watch.pdb
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\bin\Debug\netcoreapp2.1\Watch.deps.json
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\bin\Debug\netcoreapp2.1\Watch.runtimeconfig.json
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\bin\Debug\netcoreapp2.1\Watch.runtimeconfig.dev.json
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\bin\Debug\netcoreapp2.1\Watch.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\bin\Debug\netcoreapp2.1\Watch.pdb
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.csproj.CoreCompileInputs.cache
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.AssemblyInfoInputs.cache
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.AssemblyInfo.cs
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.pdb
