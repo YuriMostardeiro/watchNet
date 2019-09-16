@@ -1,0 +1,17 @@
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\WatchTest.deps.json
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\WatchTest.runtimeconfig.json
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\WatchTest.runtimeconfig.dev.json
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\WatchTest.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\WatchTest.pdb
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.csprojAssemblyReference.cache
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.csproj.CoreCompileInputs.cache
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.AssemblyInfoInputs.cache
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.AssemblyInfo.cs
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.pdb
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\Watch.dll
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\bin\Debug\netcoreapp2.1\Watch.pdb
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\WatchTest\obj\Debug\netcoreapp2.1\WatchTest.csproj.CopyComplete

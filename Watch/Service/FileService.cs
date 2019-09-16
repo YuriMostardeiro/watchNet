@@ -86,16 +86,6 @@ namespace Watch.Service
 
             Console.WriteLine("Watcher Started");
 
-            //string[] args = Environment.GetCommandLineArgs();            
-
-            // If a directory is not specified, exit program.
-            /*if (args.Length != 2)
-            {
-                // Display the proper way to call the program.
-                Console.WriteLine("Usage: Watcher.exe (directory)");
-                return;
-            }*/
-
             // Create a new FileSystemWatcher and set its properties.
             using (FileSystemWatcher watcher = new FileSystemWatcher())
             {
@@ -126,11 +116,11 @@ namespace Watch.Service
             }
         }
 
-        // Define the event handlers.
         private static void OnChanged(object source, FileSystemEventArgs e) =>
             LoadData(e.FullPath);                        
         private static void LoadData(string filePath)
         {
+            Console.WriteLine("Begin File read");
             string file = File.ReadAllText(filePath, Encoding.UTF7);
             var fileRow = file.Split(new string[] { "\n" }, StringSplitOptions.None);
             
@@ -141,23 +131,22 @@ namespace Watch.Service
             var lstCustomer = customer.LoadCustomer(fileRow.Where(t => t.Contains("002")));
             var lstSale = sale.LoadSale(fileRow.Where(t => t.Contains("003")));
 
+            Console.WriteLine("End File read");
             GeraArquivo(lstSalesman, lstCustomer, lstSale);
             
         }
-        private static void OnRenamed(object source, RenamedEventArgs e) =>
-            // Specify what is done when a file is renamed.
+        private static void OnRenamed(object source, RenamedEventArgs e) =>            
             Console.WriteLine($"File: {e.OldFullPath} renamed to {e.FullPath}");
 
         /// <summary>
-        /// Método de geração do arquivo
+        /// Generate the output fle
         /// </summary>
-        /// <param name="vendedores"></param>
-        /// <param name="clientes"></param>
-        /// <param name="vendas"></param>
+        /// <param name="salesman"></param>
+        /// <param name="customer"></param>
+        /// <param name="sale"></param>
         private static void GeraArquivo(List<Salesman> salesman, List<Customer> customer, List<Sale> sale)
         {
-            StreamWriter file;
-            List<SaleItem> maiorValor = new List<SaleItem>();
+            StreamWriter file;            
 
             string arquivo = folderOut + "\\OutputFile.txt";
 
@@ -173,6 +162,7 @@ namespace Watch.Service
 
             file.WriteLine("Worst salesman: " + sale.OrderBy(x => x.SalePrice).FirstOrDefault().Salesman);
 
+            Console.WriteLine("Output file created");
             file.Close();
         }
     }

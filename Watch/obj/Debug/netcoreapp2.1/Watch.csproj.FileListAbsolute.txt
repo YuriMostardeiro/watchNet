@@ -19,3 +19,4 @@ C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.As
 C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.AssemblyInfo.cs
 C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.dll
 C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.pdb
+C:\Users\Yuri\Desktop\Nova pasta\watchNet\Watch\obj\Debug\netcoreapp2.1\Watch.csprojAssemblyReference.cache
