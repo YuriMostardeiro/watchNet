@@ -15,70 +15,7 @@ namespace Watch.Service
     {
         private static readonly string folderIn = Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%") + "\\data\\in";
         private static readonly string folderOut = Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%") + "\\data\\out";
-        public void WatchFiles()
-        {
-            try
-            {
-                var listFormated = new List<String>();
-
-                FileUtil.CreateDirectory(folderIn);
-
-                Console.WriteLine("Watcher Started");
-
-                FileSystemWatcher fileWatcher = new FileSystemWatcher(ConfigurationManager.AppSettings["WatchPath"]);
-
-                //fileWatcher.Created += new FileSystemEventHandler(Created);
-
-                fileWatcher.EnableRaisingEvents = true;
-            }
-            catch (Exception ex)
-            {
-
-            }
-                /*WatchService watcher = FileSystems.getDefault().newWatchService();
-
-                Path directory = Paths.get(folderIn);
-                directory.register(watcher, StandardWatchEventKinds.ENTRY_CREATE);
-
-                while (true)
-                {
-                    WatchKey key = watcher.take();
-                    Optional < WatchEvent <?>> watchEvent = key.pollEvents().stream().findFirst();
-                    Path path = (Path)watchEvent.get().context();
-                    if (path.toString().endsWith(".txt"))
-                    {
-                        this.logger.info("ReadFile Started");
-
-
-                        List<String> listFileRow = new ArrayList<String>();
-                        BufferedReader buffered = new BufferedReader(new FileReader(folderIn + "\\" + path.toString()));
-                        String row = "";
-
-                        while ((row = buffered.readLine()) != null)
-                        {
-                            listFileRow.add(FileUtil.replaceAscIIDelimiter(row));
-                        }
-                        buffered.close();
-
-                        createFileWithResult(listFileRow);
-                        this.logger.info("OutputFile Updated");
-                    }
-                    boolean valid = key.reset();
-                    if (!valid)
-                    {
-                        this.logger.info("Watcher Stoped");
-                        break;
-                    }
-                }
-                watcher.close();
-            }
-            catch (IOException | InterruptedException e) {
-                this.logger.error("Watcher error", e);
-                e.printStackTrace();
-            }*/
-            
-        }
-
+      
         [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
         public static void WatchFile()
         {
@@ -101,12 +38,8 @@ namespace Watch.Service
                 // Only watch text files.
                 watcher.Filter = "*.txt";
 
-                // Add event handlers.
-                watcher.Changed += OnChanged;
+                // Add event handlers.                
                 watcher.Created += OnChanged;
-                watcher.Deleted += OnChanged;
-                watcher.Renamed += OnRenamed;
-
                 // Begin watching.
                 watcher.EnableRaisingEvents = true;
 
@@ -146,21 +79,28 @@ namespace Watch.Service
         /// <param name="sale"></param>
         private static void GeraArquivo(List<Salesman> salesman, List<Customer> customer, List<Sale> sale)
         {
-            StreamWriter file;            
+            StreamWriter file;
+
+            FileUtil.CreateDirectory(folderOut);
 
             string arquivo = folderOut + "\\OutputFile.txt";
 
             file = File.CreateText(arquivo);
 
-            file.WriteLine("Amount of salesman in the input file: " + customer.Count());
+            if (salesman.Any())
+                file.WriteLine("Amount of salesman in the input file: " + salesman.Count());
 
-            file.WriteLine("Amount of costumers in the input file: " + salesman.Count());
-            
-            Sale maxSalePrice = sale.MaxBy(x=> x.SalePrice).SingleOrDefault();
+            if (customer.Any())
+                file.WriteLine("Amount of costumers in the input file: " + customer.Count());
 
-            file.WriteLine("Id of the most expensive sale: " + maxSalePrice.SaleId);
+            if (sale.Any())
+            {
+                Sale maxSalePrice = sale.MaxBy(x => x.SalePrice).SingleOrDefault();
 
-            file.WriteLine("Worst salesman: " + sale.OrderBy(x => x.SalePrice).FirstOrDefault().Salesman);
+                file.WriteLine("Id of the most expensive sale: " + maxSalePrice.SaleId);
+
+                file.WriteLine("Worst salesman: " + sale.OrderBy(x => x.SalePrice).FirstOrDefault().Salesman);
+            }
 
             Console.WriteLine("Output file created");
             file.Close();

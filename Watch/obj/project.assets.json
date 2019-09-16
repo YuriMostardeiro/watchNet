@@ -969,23 +969,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yuri\\.nuget\\packages\\": {},
+    "C:\\Users\\YVMostardeiro\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yuri\\Desktop\\Nova pasta\\watchNet\\Watch\\Watch.csproj",
+      "projectUniqueName": "C:\\Users\\YVMostardeiro\\Desktop\\test-test\\watchNet\\Watch\\Watch.csproj",
       "projectName": "Watch",
-      "projectPath": "C:\\Users\\Yuri\\Desktop\\Nova pasta\\watchNet\\Watch\\Watch.csproj",
-      "packagesPath": "C:\\Users\\Yuri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yuri\\Desktop\\Nova pasta\\watchNet\\Watch\\obj\\",
+      "projectPath": "C:\\Users\\YVMostardeiro\\Desktop\\test-test\\watchNet\\Watch\\Watch.csproj",
+      "packagesPath": "C:\\Users\\YVMostardeiro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\YVMostardeiro\\Desktop\\test-test\\watchNet\\Watch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Yuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\YVMostardeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
